@@ -257,7 +257,7 @@ export default function About() {
               <p className="text-muted-foreground mb-4">
                 I'm a passionate full-stack developer with over{" "}
                 <span className="text-accent font-semibold">
-                  <AnimatedCounter value="3+" duration={1.5} />
+                  <AnimatedCounter value="3+" duration={0.5} />
                 </span>{" "}
                 years of experience creating digital solutions that make a real impact. My journey began with curiosity about 
                 how things work, and it has evolved into a career dedicated to building 
