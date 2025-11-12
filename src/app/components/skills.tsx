@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 
-export default function Skills() {
+export function Skills() {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef(null)
 
@@ -63,7 +63,6 @@ export default function Skills() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{
-              
                   transitionDelay: `${index * 100}ms`,
                 }}
               >

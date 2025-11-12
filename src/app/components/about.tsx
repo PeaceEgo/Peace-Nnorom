@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react"
 import { motion, useInView } from "framer-motion"
 import { Code2, Palette, Server, Zap, Users, Award, Clock } from "lucide-react"
 
-// Improved AnimatedCounter component
+// Simplified AnimatedCounter component
 const AnimatedCounter = ({ 
   value, 
   duration = 20
@@ -13,8 +13,6 @@ const AnimatedCounter = ({
   duration?: number 
 }) => {
   const [count, setCount] = useState(0)
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
   
   // Check if value is a number (with optional + sign) or percentage
   const numericValue = value.replace(/[+%]/g, '')
@@ -22,7 +20,7 @@ const AnimatedCounter = ({
   const suffix = value.replace(numericValue, '') // Get the + or % suffix
 
   useEffect(() => {
-    if (isNumber && isInView) {
+    if (isNumber) {
       const target = parseInt(numericValue)
       let start = 0
       const increment = target / (duration * 60) // 60 frames per second
@@ -39,16 +37,16 @@ const AnimatedCounter = ({
       
       return () => clearInterval(timer)
     }
-  }, [isNumber, numericValue, duration, isInView])
+  }, [isNumber, numericValue, duration])
 
   if (!isNumber) {
-    return <span ref={ref}>{value}</span>
+    return <span>{value}</span>
   }
 
-  return <span ref={ref}>{Math.floor(count)}{suffix}</span>
+  return <span>{Math.floor(count)}{suffix}</span>
 }
 
-// Animated skill bar with percentage
+// Fixed AnimatedSkillBar component
 const AnimatedSkillBar = ({ 
   skill, 
   index 
@@ -58,6 +56,13 @@ const AnimatedSkillBar = ({
 }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-50px" })
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true)
+    }
+  }, [isInView, hasAnimated])
 
   return (
     <motion.div
@@ -70,7 +75,7 @@ const AnimatedSkillBar = ({
       <div className="flex justify-between text-sm">
         <span className="font-medium">{skill.name}</span>
         <span className="text-muted-foreground">
-          {isInView ? (
+          {hasAnimated ? (
             <AnimatedCounter value={`${skill.level}%`} duration={1} />
           ) : (
             "0%"
