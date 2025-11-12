@@ -137,7 +137,7 @@ export default function Hero() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:nnorompeace14@gmail.com"
+                href="mailto:ceeprintz111@gmail.com"
                 className="p-3 bg-muted hover:bg-accent/20 rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-accent/30"
                 aria-label="Send Email"
               >
