@@ -63,7 +63,7 @@ export default function Skills() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{
-                  transitionDelay: isVisible ? `${index * 100}ms` : "0ms",
+                  transitionDelay: `${index * 100}ms`,
                 }}
               >
                 <h3 className="text-2xl font-bold mb-6 text-accent">{category.title}</h3>
