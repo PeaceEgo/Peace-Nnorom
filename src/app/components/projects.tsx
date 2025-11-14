@@ -2,7 +2,8 @@
 import PhoneTracker from "@/app/assets/images/phonetracker.png"
 import Meezak from "@/app/assets/images/meezak.png"
 import Lbt from "@/app/assets/images/lbt.png"
-import Ecommerce from "@/app/assets/images/ecommerce.png"
+import Momar from "@/app/assets/images/momar.png"
+import Travelinn from "@/app/assets/images/travelinn.png"
 import Goride from "@/app/assets/images/goride.png"
 import { useEffect, useRef, useState } from "react"
 import { ExternalLink, Github } from "lucide-react"
@@ -64,6 +65,27 @@ export default function Projects() {
       },
     },
     {
+      title: "Momar Technologies",
+      description:
+        "WordPress e-commerce site for selling electrical gadgets, solar panels, solar lights, CCTV cameras, and power solutions with product catalog and online ordering capabilities.",
+      tags: ["WordPress"],
+      image: Momar,
+      links: {
+        live: "https://www.momartechnologies.com",
+      },
+    },
+
+    {
+        title: "Travel Inn Magazine",
+      description:
+        "WordPress website for a travel agency featuring destination guides, travel packages, booking information, and travel tips for customers planning their next adventure.",
+      tags: ["WordPress"],
+      image: Travelinn,
+      links: {
+        live: "https://travelinn.life",
+      },
+    },
+    {
       title: "Ride-Hailing Platform",
       description:
         "A full-featured ride-hailing application with real-time tracking, driver-passenger matching, fare calculation, and secure payment integration for urban transportation.",
@@ -74,17 +96,7 @@ export default function Projects() {
         live: "https://go-rideng.netlify.app/",
       },
     },
-    {
-      title: "E-Commerce Platform (On-Going)",
-      description:
-        "Modern e-commerce platform featuring product catalog, shopping cart, secure checkout with Stripe integration, user authentication, and admin dashboard for inventory management.",
-      tags: ["Next.js", "Tailwind CSS", "Stripe", "Mongodb", "Material UI"],
-      image: Ecommerce,
-      links: {
-        github: "#",
-        live: "#",
-      },
-    },
+    
   ]
 
   return (
