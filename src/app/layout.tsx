@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Peace Nnorom",
-  description: "Full-Stack Developer transforming ideas into high-performance web applications. Expert in React, Next.js, TypeScript, Express.js & Nest.js. Let's build something amazing.",
+  description: "Full-Stack Engineer building scalable business applications, enterprise platforms, and digital products. Expert in React, Next.js, TypeScript, NestJS & Node.js.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: '16x16', type: 'image/png' },
