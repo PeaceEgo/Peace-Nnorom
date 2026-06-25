@@ -11,7 +11,7 @@ export const projects: Project[] = [
     challenge:
       "Families and businesses needed secure real-time device monitoring and location tracking.",
     solution:
-      "Built a full-stack device tracking platform supporting real-time location updates, QR based device onboarding, secure authentication, and multi-device management.",
+      "Built a full-stack device tracking platform supporting real-time location updates, QR-based device onboarding, secure authentication, and multi-device management.",
     impact: [
       "Implemented real-time updates using WebSockets.",
       "Enabled secure device registration and management.",
