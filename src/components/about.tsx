@@ -11,7 +11,7 @@ export default function About() {
   const paragraphs = [
     <>
       With over <span className="text-accent font-semibold">3+ years</span> of professional experience,
-      I specialize in building end-to-end web applications — from intuitive user interfaces to
+      I specialize in building end-to-end web applications from intuitive user interfaces to
       robust backend systems. My work spans client projects, enterprise platforms, and internal
       products delivered in production environments.
     </>,
@@ -23,7 +23,7 @@ export default function About() {
     </>,
     <>
       I work across the modern JavaScript ecosystem — React, Next.js, TypeScript, Node.js, and
-      NestJS — with experience integrating REST APIs, databases, and third-party services. I thrive
+      NestJS with experience integrating REST APIs, databases, and third-party services. I thrive
       in collaborative environments where engineering directly impacts business outcomes.
     </>,
   ]
